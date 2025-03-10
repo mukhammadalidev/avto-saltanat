@@ -7,3 +7,4 @@ django-cors-headers
 Pillow
 whitenoise
 djangorestframework-simplejwt
+drf_yasg
