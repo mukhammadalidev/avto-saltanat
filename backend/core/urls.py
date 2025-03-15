@@ -45,6 +45,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('pro/', include('products.urls')),
     path('news/', include('news.urls')),
+    path('accounts/',include('users.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('swagger/', schema_view.with_ui('swagger',
