@@ -36,18 +36,30 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    "daphne",  # Asynchronous WebSocket server
+
     'django.contrib.staticfiles',
     # packages
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_yasg',
     'corsheaders',
+    "channels",
     # local
     'users',
     'news',
     'products',
+    "socketio_app", 
+
 
 ]
+
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}
 
 
 
@@ -94,6 +106,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'core.wsgi.application'
+ASGI_APPLICATION = "core.asgi.application"
 
 
 # Database
