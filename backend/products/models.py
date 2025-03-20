@@ -8,6 +8,7 @@ class Product(models.Model):
     file = models.URLField()
     technical_specification = models.ForeignKey('technical_specification',on_delete=models.CASCADE)
     category = models.ForeignKey('CategoryModel',on_delete=models.CASCADE)
+    price = models.CharField(max_length=11)
 
 
 
